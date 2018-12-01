@@ -109,7 +109,7 @@ section {width: 1900px; margin: 0 auto;}
 }
 
 .info div a:not(.button):hover:before {
-	transform: rotate(30deg);
+	transform: rotate(40deg);
 }
 
 .info div a.button {
@@ -130,17 +130,18 @@ main .section_1 {
 	background: url(../images/opacity_fon.png) repeat-x left bottom,
 				url(../images/top_fon.png) no-repeat 305px 0;
 	background-color: #3a3f52;
+	height: 765px;
 }
 
 .section_1 div > h1 {
-	padding-top: 39px;
+	padding: 40px 0;
 	font-size: 42px;
 	line-height: 45px;
 	font-weight: bold;
 	color: #fff;
 }
 
-.section_1 div > h1 > p {
+.section_1 div > h1 > span {
 	font-size: 34px;
 }
 
@@ -160,7 +161,7 @@ form:before {
 }
 
 form {
-	margin: 60px 30px 60px auto;
+	float: right;
 	position: relative;
 	width: 370px;
 	background: #82add5;
@@ -229,6 +230,7 @@ form input[type="submit"] {
 	border-bottom: 4px solid #c8d5b7;
 	border-radius: 5px;
 	box-sizing: border-box;
+	cursor: pointer;
 }
 
 form input:focus {
@@ -363,65 +365,83 @@ main .section_3 {
 
 .section_3 div.flex-div {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
+	padding-bottom: 100px;
 }
 
-.section_3 .flex-div > ul {
+.section_3 div.info_block {
 	width: 290px;
-	padding-bottom: 90px;
-}
-
-.section_3 .flex-div > ul li {
-	margin: 0 0 10px;
 	text-align: center;
 }
 
-.section_3 ul > li > div {
+.section_3 div.img_input_block {
 	position: relative;
-	padding: 0 0 20px;
+	width: 263px;
+	margin: 0 auto;
 }
 
-.section_3 ul > li > div:before {
+.section_3  div.img_input_block:before {
 	content: "";
 	position: absolute;
-	width: 280px;
-	height: 280px;
 	top: -12px;
+	left: -12px;
+	right: -12px;
+	bottom: -12px;
+	border: 6px solid #fff;
+}
+
+.section_3 div.img_input_block > img {
+	position: absolute;
+	display: block;
+	top: 0;
 	left: 0;
-	border: 5px solid #fff;
+	z-index: 1;
+	opacity: 0;
+	transition: opacity 0.3s;
 }
 
-.section_3 ul > li > div:hover:before {
-	border: 5px solid #82add5;
-	cursor: pointer;
+.section_3 div.img_input_block input{
+	display: none;
 }
 
-.section_3 ul.small {
+.section_3 div.img_input_block input:checked + img{
+	position: relative;
+	opacity: 1;
+}
+
+.section_3 div.check {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
+	padding-top: 30px;
 }
 
-.section_3 ul.small li {
-	border: 3px solid #fff;
-}
-
-.section_3 ul.small li:hover {
-	border: 3px solid #82add5;
+.section_3 div.check label {
+	border: 4px solid #fff;
 	cursor: pointer;
 }
 
-.section_3 ul li p {
+.section_3 div.check label:hover {
+	border: 4px solid #82add5;
+}
+
+.section_3 div.price {
+	padding-top: 26px;
+}
+
+.section_3 div.price p {
 	font-size: 24px;
 	line-height: 45px;
 	color: #fff;
 }
 
-.section_3 ul li p span {
+.section_3 div.price p span {
 	font-weight: bold;
 	color: #82add5;
 }
 
-.section_3 ul li a.yellow {
+.section_3 div.price a.yellow {
 	display: block;
 	margin: 30px 15px 0;
 	padding: 18px 0;
@@ -436,7 +456,7 @@ main .section_3 {
 	box-sizing: border-box;
 }
 
-.section_3 ul li a.yellow:hover {
+.section_3 div.price a.yellow:hover {
 	background: #fff7af;
 	color: #3c77b0;
 }
@@ -505,13 +525,13 @@ main .section_5 {
 	background: url(../images/opacity_fon.png) repeat-x left bottom,
 				url(../images/girl_2.png) no-repeat 200px bottom;
 	background-color: #3a3f52;
-	padding-top: 90px;
-	padding-bottom: 125px;
+	height: 810px;
 }
 
 .section_5 form {
 	position: relative;
-	margin-top: 0;
+	float: right;
+	margin-top: 90px;
 	padding: 32px 20px 60px 33px;
 	width: 412px;
 }
@@ -552,7 +572,7 @@ main .section_6 {
 }
 
 .section_6 h1 {
-	padding: 60px 0 15px;
+	padding: 60px 0;
 	font-size: 55px;
 	line-height: 45px;
 	color: #303445;
@@ -565,7 +585,7 @@ main .section_6 {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin: 0 120px;
-	padding-bottom: 80px;
+	padding-bottom: 62px;
 }
 
 .section_6 ul li {
@@ -574,14 +594,9 @@ main .section_6 {
 
 .section_6 ul li div {
 	position: relative;
-	margin: 45px auto 25px;
 	font-size: 70px;
 	line-height: 45px;
 	color: #303445;
-	width: 132px;
-	height: 132px;
-	border: 1px solid #83aed5;
-	border-radius: 50%;
 }
 
 .section_6 ul li:nth-child(6) div {font-size: 34px;}
@@ -590,7 +605,25 @@ main .section_6 {
 	margin: 45px auto;
 }
 
+.section_6 ul li div:before {
+	content: "";
+	position: absolute;
+	top: -45px;
+	left: 48px;
+	width: 131px;
+	height: 132px;
+	background: url(../images/sec_6a.png) no-repeat left top;
+}
+
+.section_6 ul li:nth-child(2) div:before {background: url(../images/sec_6b.png) no-repeat left top;}
+.section_6 ul li:nth-child(3) div:before {background: url(../images/sec_6c.png) no-repeat left top;}
+.section_6 ul li:nth-child(4) div:before {background: url(../images/sec_6d.png) no-repeat left top;}
+.section_6 ul li:nth-child(5) div:before {background: url(../images/sec_6e.png) no-repeat left top;}
+.section_6 ul li:nth-child(6) div:before {background: url(../images/sec_6f.png) no-repeat left top;}
+
 .section_6 ul li > p {
+	display: block;
+	padding: 25px 0 30px;
 	font-size: 22px;
 	line-height: 25px;
 	color: #303445;
@@ -727,9 +760,17 @@ main .section_8 {
 	color: #333333;
 }
 
+.section_8 div iframe {
+	width: 272px;
+	height: 166px;
+	border: none;
+}
+
 .section_8 div .vid1 {
 	float: left;
 	padding: 8px 18px 90px 0;
+	width: 640px;
+	height: 390px;
 }
 
 .section_8 div .vid2 {
