@@ -220,9 +220,10 @@ form input::-ms-input-placeholder {
 
 form input[type="submit"] {
 	margin-top: 24px;
-	padding: 24px 10px 19px;
-	font-size: 25px;
+	padding: 24px 18px 19px;
+	font-size: 22px;
 	line-height: 21px;
+	font-weight: bold;
 	color: #3a3f52;
 	background: #fffdd1;
 	text-transform: uppercase;
@@ -752,7 +753,6 @@ main .section_8 {
 	text-transform: uppercase;
 }
 
-.section_8 div img {}
 .section_8 div p {
 	font-size: 15px;
 	font-weight: bold;
