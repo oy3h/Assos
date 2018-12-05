@@ -198,6 +198,7 @@ form input {
 	margin-bottom: 9px;
 	padding: 15px 15px 15px 63px;
 	width: 337px;
+	font-family: Scada, sans-serif;
 	font-size: 15px;
 	line-height: 22px;
 	color: #fff;
@@ -221,7 +222,7 @@ form input::-ms-input-placeholder {
 form input[type="submit"] {
 	margin-top: 24px;
 	padding: 24px 18px 19px;
-	font-size: 22px;
+	font-size: 25px;
 	line-height: 21px;
 	font-weight: bold;
 	color: #3a3f52;
